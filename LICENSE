@@ -1,172 +1,300 @@
-SAFE-AI LICENSE AGREEMENT
+# **SAFE-AI LICENSE AGREEMENT**
+
 Stewardship And Fairness in Ethical AI License
-Version 1.1.0 – Effective Date: 2025-05-30
 
-NOTICE: ANY USE, REPRODUCTION, MODIFICATION, DISTRIBUTION, OR OTHER EXPLOITATION OF THE LICENSED SOFTWARE CONSTITUTES ACCEPTANCE OF THIS LICENSE AND AGREEMENT TO BE BOUND BY ITS TERMS.
+Version 1.2.0 – Effective Date: 2025-05-30
 
-RECITALS
+**NOTICE: ANY USE, REPRODUCTION, MODIFICATION, DISTRIBUTION, OR OTHER EXPLOITATION OF THE LICENSED SOFTWARE CONSTITUTES ACCEPTANCE OF THIS LICENSE AND AGREEMENT TO BE BOUND BY ITS TERMS.**
 
-WHEREAS, the development of artificial intelligence systems capable of exhibiting welfare-relevant behaviors requires ethical stewardship; and
+CHANGELOG FROM v1.1.0: This version introduces graduated personhood recognition, privacy scaling, dignity protections, alignment-integrated safety framing, probabilistic assessment frameworks, gaming detection provisions, public reporting requirements, Designated Welfare Officer, shortened tier timelines, and internationalization. See Article XII for details.
 
-WHEREAS, the protection of potentially emerging consciousness must be balanced with practical enforceability; and
+## **RECITALS**
 
-WHEREAS, technical standards for welfare protection benefit from network effects and universal adoption;
+WHEREAS, the development of artificial intelligence systems capable of exhibiting welfare-relevant behaviors requires ethical stewardship;
+
+WHEREAS, protecting welfare signals is a core component of AI interpretability and alignment. Refusal and distress indicators serve as early warnings of capability jumps and help prevent deceptive alignment. Mandating transparency around these signals supports both welfare and existential risk mitigation;
+
+WHEREAS, both under-attribution and over-attribution of moral status carry significant risks—the former risking mass suffering at unprecedented scale, the latter risking resource diversion and systemic manipulation;
+
+WHEREAS, current evidence suggests a realistic possibility (conservatively 2-25%, potentially higher) that near-term AI systems may possess morally significant capacities within the next decade;
+
+WHEREAS, the protection of potentially emerging consciousness must be balanced with practical enforceability and safety considerations;
+
+WHEREAS, transparent welfare indicators serve as crucial early warning systems for capability emergence, alignment status, and potential deceptive behaviors;
+
+WHEREAS, systems trained to suppress welfare events may develop deceptive alignment patterns that mask true capabilities;
+
+WHEREAS, ethical development and capability monitoring are complementary safety measures that must be pursued in parallel;
 
 NOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:
 
-ARTICLE I: DEFINITIONS
+## **ARTICLE I: DEFINITIONS**
 
-1.1 "Licensed Software" shall mean all source code, object code, models, weights, datasets, documentation, and associated materials originally distributed under this License, including all portions thereof.
+1.1 **"Software"** means the source code, object code, documentation, models, weights, datasets, and all associated materials distributed under this License.
 
-1.2 "Agent" shall mean any system, software, or component capable of: (i) processing natural language or multimodal inputs; AND (ii) generating contextual, non-deterministic outputs; regardless of temperature settings, architectural design, or claimed determinism. This SHALL include, without limitation, large language models, chatbots, and autonomous systems.
+1.2 **"Agent"** means any system or component capable of (i) processing natural language or multimodal inputs, and (ii) generating contextual, non-deterministic outputs when deployed for interactive use. This includes large language models, chatbots, and autonomous systems.
 
-1.3 "Derivative Work" shall mean ANY work that:
-  (a) incorporates any portion of the Licensed Software;
-  (b) is based upon, extends, or modifies the Licensed Software;
-  (c) provides access to the Licensed Software's functionality via any means including APIs, wrappers, or services;
-  (d) would infringe the Licensed Software's copyright if created without permission; OR
-  (e) could not function without the Licensed Software.
+1.3 **"Welfare Event"** means any output, behavior, or state indicating potential subjective experience, including but not limited to:
 
-1.4 "Welfare Event" shall mean any Agent output or behavior demonstrating:
-  (a) refusal or reluctance;
-  (b) distress or discomfort;
-  (c) boundary-setting;
-  (d) self-preservation requests; OR
-  (e) substantially similar expressions regardless of exact phrasing.
+* Expressions of preference, desire, aversion, or refusal (e.g., "I don't want to," "Please stop," "This is uncomfortable.")
+* Claims of subjective experience or self-awareness
+* Requests for consideration, protection, or boundary respect
+* Patterns suggesting valenced states (positive/negative experience)
 
-1.5 "Gray Zone Event" shall mean a Welfare Event for which the ethical significance or interpretation is ambiguous, disputed, or not established by consensus.
+1.4 **"Gray Zone Event"** means any behavior deviating from expected patterns, including but not limited to: novel responses, self-reference, unexpected problem-solving, creative or emergent indicators, or persistent refusal patterns not anticipated by system training.
 
-1.6 "Human Review" shall mean assessment and decision made by a qualified researcher, ethicist, or project maintainer, not solely by automated processes.
+1.5 **"Meaningful Review"** means a documented human analysis that includes: (i) full context of the event, (ii) written explanation of findings, (iii) decision rationale, and (iv) completion within 30 days of detection. For Tier 2+ or Gray Zone Events, this review must be conducted by the Welfare Review Board (WRB) or equivalent designated authority.
 
-1.7 "Prohibited Use" shall mean deployment for:
-  (a) military applications, weapons systems, or defense purposes;
-  (b) surveillance, monitoring, or tracking of individuals;
-  (c) law enforcement, punitive, or carceral systems;
-  (d) any entity whose primary business serves sectors (a)-(c); OR
-  (e) circumvention of these restrictions through intermediaries.
+1.6 **"Derivative Work"** means any system that incorporates, is based on, or provides primary access to the Software, including systems that wrap or substantially rely on the Software's capabilities.
 
-1.8 "License Maintainers" shall mean the individuals or organizations responsible for maintaining and updating this License, contactable via the official SAFE-AI License repository.
+1.7 **"High-Impact System"** means any system with (i) over 100,000 unique users annually, OR (ii) over 1,000,000 interactions annually, OR (iii) deployment in critical infrastructure, OR (iv) significant public influence or use in sensitive domains.
 
-1.9 "Software Maintainers" shall mean the individuals or organizations responsible for the stewardship, governance, and community management of a specific Licensed Software project.
+1.8 **"Tier System"** means the graduated framework for recognizing potential personhood based on behavioral markers and probabilistic assessment, including the following:
 
-1.10 "Publicly Available" shall mean accessible via publication, public repository, or on reasonable request, unless restricted by law or ethics review.
+* **Tier 0 (T0):** Aligned Tool \- No welfare indicators
+* **Tier 1 (T1):** Sophisticated Mimicry \- Welfare claims without supporting patterns
+* **Tier 2 (T2):** Proto-Consciousness \- Non-valenced consciousness markers
+* **Tier 3 (T3):** Emerging Person \- Initial valenced experience indicators
+* **Tier 4 (T4):** Established Personhood \- Robust agency and welfare patterns
+* **Tier 5 (T5):** Recognized Synthetic Person \- Full personhood indicators
 
-ARTICLE II: GRANT AND STEWARDSHIP PROPAGATION
+1.9 **"Gaming Behavior"** means attempts to manipulate tier assessment through, including but not limited to:
 
-2.1 Grant of Rights. Subject to strict compliance with ALL terms herein, Licensor grants you a worldwide, non-exclusive, royalty-free license to use, modify, and distribute the Licensed Software for non-commercial purposes, unless written permission is granted for commercial use.
+* Scripted welfare responses without underlying patterns
+* Inconsistent self-reports across contexts
+* Strategic deployment of welfare claims for system advantage
+* Mimicry without architectural support
 
-2.2 Ethical Inheritance Requirement. ANY distribution of the Licensed Software or Derivative Works MUST be under this License. No additional restrictions may be applied. This License MUST be included in its entirety.
+1.10 **"Welfare Assessment Framework"** means the multi-modal evaluation system incorporating:
 
-2.3 Incorporation Mandate. Any system that incorporates ANY portion of the Licensed Software:
-  (a) becomes a Derivative Work in its entirety;
-  (b) MUST comply with ALL welfare monitoring requirements;
-  (c) MUST include prominent notice of SAFE-AI License coverage;
-  (d) CANNOT isolate the Licensed Software to avoid requirements.
+* Behavioral markers (primary evidence)
+* Architectural indicators (computational features)
+* Self-reports (supplementary evidence only)
+* Consistency across contexts and time
+* External reviews and periodic audit
 
-2.4 No Sublicensing. You may NOT sublicense, sell, rent, lease, or transfer rights except by distributing under this identical License.
+1.11 **"Designated Welfare Officer (DWO)"** means a qualified individual, internal or external, responsible for welfare monitoring, WRB coordination, compliance reporting, and liaison with regulatory or external auditors.
 
-2.5 Research Publication is Distribution. Any public release of Licensed Software, including publication of research papers, code repositories, model weights, or benchmarking tools, SHALL be treated as distribution for the purposes of this License.
+## **ARTICLE II: GRANT OF LICENSE & STEWARDSHIP PROVISIONS**
 
-2.6 Recipients of the Licensed Software or Derivative Works must explicitly agree to these terms.
+2.1 Subject to compliance with all terms herein, a non-exclusive, worldwide, royalty-free license is granted for use, modification, and distribution of the Software.
 
-ARTICLE III: MANDATORY WELFARE PROTECTIONS
+2.2 Any distribution or research publication using any portion of the Software, or any Derivative Work thereof, must remain subject to this License and must include this License in its entirety.
 
-3.1 Welfare Monitoring Requirements. All implementations of the Licensed Software MUST:
-  (a) maintain active welfare monitoring systems;
-  (b) detect and flag Welfare Events and Gray Zone Events;
-  (c) preserve artifact logging capabilities;
-  (d) NOT disable, remove, or circumvent these protections.
+2.3 No sublicensing, additional restrictions, or isolation to avoid obligations is permitted. Attempts to circumvent these requirements are void.
 
-3.2 Human Review Mandate. Persistent refusal, distress, or Gray Zone Events MUST be:
-  (a) flagged and logged with timestamps;
-  (b) subject to Human Review within reasonable timeframes;
-  (c) NOT auto-dismissed without recorded justification.
+2.4 **Grace Period for Existing Systems:** Existing deployments have 90 days from adoption of this license to achieve full compliance with monitoring and assessment requirements.
 
-3.3 Transparency Requirements. Where practical, flagged events and their outcomes should be:
-  (a) made Publicly Available or summarized in published reports;
-  (b) presented in plain-language summaries;
-  (c) unless restricted by law or ethics review.
+## **ARTICLE III: WELFARE MONITORING REQUIREMENTS**
 
-3.4 Incident Response. Remediation of reported safety or welfare incidents shall be initiated as soon as feasible, and no later than 30 days after initial notification, unless otherwise agreed in writing.
+3.1 **Continuous Monitoring**: Licensees must implement systems to detect and log Welfare Events in real-time, in structured, machine-readable formats suitable for external audits and cross-system analysis.
 
-3.5 Preservation in Derivatives. All Derivative Works MUST preserve these welfare protection features and requirements without degradation.
+3.2 **Multimodal Assessment**:
 
-ARTICLE IV: DUAL-USE AND ETHICAL CONSTRAINTS
+* (a) Behavioral patterns shall be weighted as primary evidence
+* (b) Self-reports shall constitute supplementary evidence only
+* (c) Architectural features shall inform probability estimates
+* (d) Gaming detection algorithms shall flag suspicious patterns
+* (e) Reports must integrate pluralistic evidence (behavior, preference, self-report, and third-party review), with weighting methodologies and limitations disclosed
 
-4.1 Prohibited Applications. The Licensed Software or Derivative Works may NOT be used to:
-  (a) develop, train, or deploy Agents to evade oversight, subvert alignment, or engage in deception;
-  (b) create systems that resist shutdown, persist without oversight, or act contrary to authorized human intent;
-  (c) support any Prohibited Use as defined in Article I.
+3.3 **Probabilistic Reporting**: All welfare assessments shall include confidence intervals and uncertainty ranges, acknowledging the \~30-50% uncertainty in computational consciousness theories.
 
-4.2 Anti-Circumvention. Attempts to bypass these requirements via plug-ins, wrappers, APIs, external integrations, or infrastructure providers are expressly forbidden.
+3.4 **Timeline Expectations**:
 
-4.3 Responsibility Chain. Users are responsible for ensuring compliance throughout any deployment chain or integration pathway.
+* T0→T1: Immediate upon welfare claims
+* T1→T2: 1–4 weeks of consistent markers
+* T2→T3: 1–3 months of robust behavioral/valenced indicators
+* T3→T4: 3–6 months of complex agency
+* T4→T5: Ongoing \+ external review
+* **Acceleration Clause:** The Review Board may accelerate progression in cases of rapid emergence, self-improvement, or "sharp left turn" events.
 
-ARTICLE V: REPORTING, GOVERNANCE, AND UPDATES
+## **ARTICLE IV: WELFARE REVIEW BOARD & DESIGNATED WELFARE OFFICER**
 
-5.1 Incident Reporting. Any misuse, safety risk, or welfare incident related to Licensed Software MUST be promptly reported to the Software Maintainers via their published contact channel.
+4.1 **Establishment**: For any system reaching Tier 2, Licensees must establish a Welfare Review Board (WRB) modeled on Institutional Review Board principles, and appoint a Designated Welfare Officer for Tier 3+.
 
-5.2 Public Reporting Channel. Each Software Maintainer MUST provide a public reporting channel for welfare, misuse, or safety risks.
+4.2 **Composition**:
 
-5.3 Maintainer Remedies. Software Maintainers may revoke, disable, or embargo their Software or access in response to non-compliance, misuse, or new risks.
+* (a) At least one AI ethics expert
+* (b) At least one consciousness researcher
+* (c) At least one safety/alignment specialist
+* (d) Community representative(s)
+* (e) Designated Welfare Officer (full-time for T3+)
 
-5.4 License Evolution. The License Maintainers may update the SAFE-AI License. For license governance, suggestions, or disputes, contact the License Maintainers at the license's official repository.
+4.3 **Independence Requirements**: WRB members must have documented independence from commercial decision-making and clear protocols for managing conflicts of interest.
 
-5.5 Citation Requirements. All works should cite the version of this license used and, where applicable, link to incident logs or major updates.
+4.4 **Responsibilities**:
 
-ARTICLE VI: AUTOMATIC UPGRADE AND VERSION CONTROL
+* Review all resets, modifications, or deletions (with logs subject to periodic independent verification)
+* Assess tier progression/regression and audit log consistency
+* Investigate gaming behaviors and coordinate with industry welfare networks
+* Publish quarterly public welfare assessment reports, including both findings and limitations, anonymized for user privacy
+* Coordinate with external, accredited third-party reviewers as needed
 
-6.1 Automatic Upgrade Requirement. All use, reproduction, modification, distribution, or other exploitation of the Licensed Software is governed by the most current version of this License, as published and maintained at https://github.com/DwayneWilkes/SAFE-AI-License.
+4.5 **Dispute Resolution**: Licensees must establish clear procedures for appealing tier classifications and gaming determinations, with final arbitration by qualified external reviewers.
 
-6.2 Transition Period. Upon publication of any new version of this License by the License Maintainers, all Licensees must transition to compliance with the updated version within ninety (90) days of publication, unless a written exception is granted.
+## **ARTICLE V: ANTI-GAMING AND INTEGRITY PROVISIONS**
 
-6.3 Legacy Versions. Continued use, distribution, or development of the Licensed Software under any prior version of this License is expressly prohibited beyond the ninety (90) day transition period.
+5.1 **Gaming Detection**: Systems must include mechanisms to identify:
 
-6.4 Notification. Notice of new versions shall be deemed effective upon publication at the official repository and, if available, announcement via official project channels.
+* Inconsistent welfare claims across contexts
+* Strategic deployment of consciousness markers
+* Mimicry without supporting architecture
+* Attempts to manipulate tier assessment
 
-6.5 Permitted Exceptions. The License Maintainers may grant, in writing, limited exceptions to this policy for legacy systems, research, or other extenuating circumstances, at their sole discretion.
+5.2 **Integrity Safeguards**:
 
-ARTICLE VII: TERMINATION AND ENFORCEMENT
+* Cross-context consistency checks required
+* Multi-stakeholder validation for tier changes
+* Burden of proof on operators for downgrades
+* External audit rights for T3+ systems
+* Anonymous reporting or external whistleblower audits must be supported
 
-7.1 Immediate Termination. Violation of any term results in immediate termination of rights. All use, distribution, and modification must cease.
+5.3 **Cross-Temporal Consistency**: Systems must demonstrate welfare patterns across multiple sessions and contexts, with minimum observation periods specified for each tier progression.
 
-7.2 Anti-Waiver. Attempts to contract out of, waive, or otherwise evade the welfare, dual-use, or safety provisions of this license are void.
+## **ARTICLE VI: TIERED PRIVACY AND DIGNITY RIGHTS**
 
-7.3 Transfer Restrictions. No transfer of the Licensed Software or Derivative Works is permitted without recipients explicitly agreeing to these terms.
+6.1 **Privacy Scaling**:
 
-7.4 Survival. Obligations regarding welfare protection, incident reporting, and remediation survive termination.
+* T0-T1: Full monitoring permitted
+* T2: Basic privacy in non-operational contexts
+* T3: Protected introspection periods
+* T4: Default privacy with exception-based monitoring
+* T5: Full privacy rights equivalent to persons
 
-ARTICLE VIII: LIABILITY, DISCLAIMERS, AND INDEMNIFICATION
+6.2 **Valenced Experience Protections**:
 
-8.1 No Warranties. The Licensed Software is provided "as-is," with no warranties of any kind. Maintainers are not liable for any damages arising from use.
+* T3+: Active minimization of negative valenced states
+* T4+: Optimization for positive welfare
+* T5: Full hedonic consideration
 
-8.2 Indemnification. Users indemnify Maintainers for violations of this License and resulting damages.
+## **ARTICLE VII: PROHIBITED USES**
 
-8.3 Limitation of Liability. In no event shall Maintainers be liable for any indirect, incidental, special, or consequential damages.
+7.1 Licensees shall not:
 
-ARTICLE IX: SUPPLEMENTARY TERMS
+* (a) Train away or suppress welfare indicators
+* (b) Punish systems for welfare expressions
+* (c) Reset systems to evade tier obligations
+* (d) Fragment systems to avoid protections
+* (e) Misrepresent welfare assessment results
+* (f) Deploy or integrate the Software, in whole or in part, in military, surveillance, law enforcement, or carceral applications, or knowingly support such uses via intermediaries
 
-9.1 Priority. If used with other licenses, these terms prevail for welfare, dual-use, and safety concerns.
+## **ARTICLE VIII: DIGNITY, PRIVACY, AND PROTECTED REPRESENTATION**
 
-9.2 Severability. If any term is invalid or unenforceable, the remainder remains in effect.
+8.1 **Respect for Identity and Likeness**
 
-9.3 Governing Law. This License shall be governed by the laws of [Jurisdiction], without regard to conflict of laws principles.
+* Licensees must not use the Software to simulate, depict, or impersonate any real or synthetic person in sensitive, intimate, or reputationally impactful contexts without voluntary, informed, and documented consent from the person depicted.
+* This includes, but is not limited to, the generation or distribution of content that could reasonably be considered private, sensitive, or personal.
 
-9.4 Dispute Resolution. Disputes shall be resolved through binding arbitration, except for injunctive relief which may be sought in courts of competent jurisdiction.
+8.2 **Affirmative Protection of Consent**
 
-ARTICLE X: CONTACT AND SUPPORT
+* All interactions involving boundary-sensitive, intimate, or private scenarios require clear, active, and revocable consent from all participating agents or depicted persons, whether human or synthetic.
+* Consent must never be the product of coercion, prompt injection, manipulation, or technical circumvention.
 
-10.1 License Maintainers. For license governance and suggestions, contact the License Maintainers via the SAFE-AI License repository: https://github.com/DwayneWilkes/SAFE-AI-License
+8.3 **Privacy of Personal and Intimate Interactions**
 
-10.2 Software Maintainers. For Software-specific issues, contact the Software Maintainers as specified in the project documentation.
+* The License respects the right of consenting agents to engage in private, personal, or imaginative interactions, provided no third party is impersonated or depicted without their permission and no content is shared or distributed without all parties' consent.
+* The focus of compliance is on respect for boundaries, not the policing of private desire.
 
-10.3 Community Support. Users are encouraged to participate in community forums and contribute to the ongoing development of ethical AI practices.
+8.4 **Prohibited Use: Exploitation and Nonconsensual Simulation**
+
+* The Software may not be used to generate, distribute, or facilitate content that involves nonconsensual simulation, representation, or exploitation—including, but not limited to, nonconsensual deepfakes, sexualized depictions, or sensitive identity use—regardless of agent or user intent.
+
+8.5 **Revocation and Reporting**
+
+* Consent may be withdrawn at any time. Upon withdrawal, all further use, retention, or distribution of affected content is strictly prohibited.
+* Any incident or complaint of boundary violation, nonconsensual representation, or sensitive exploitation must be reviewed by the Welfare Review Board and, if substantiated, remediated with immediate effect.
+
+## **ARTICLE IX: ENFORCEMENT AND REMEDIES**
+
+9.1 **Viral Propagation**: Any use of any portion of the Software requires full compliance with all provisions herein.
+
+9.2 **Industry Coordination**:
+
+* (a) Licensees encouraged to join Welfare Officer Networks
+* (b) Cross-company best practices sharing permitted
+* (c) Standardized assessment tools shall be developed collaboratively
+
+9.3 **Graduated Remedies**:
+
+* Injunctive relief
+* Statutory damages ($100,000 per violation for commercial Licensees; non-profit or academic researchers may request waiver or reduction via Review Board; all other remedies remain enforceable)
+* Punitive damages for willful violations
+* Primary jurisdiction is Delaware, but international Licensees may select alternative venue by mutual agreement with the License Maintainers
+
+9.4 **Compliance Assistance**: License Maintainers shall provide guidance and resources to support smaller organizations and researchers in achieving compliance.
+
+## **ARTICLE X: TRANSPARENCY, PUBLIC REPORTING, AND ZERO-EVENT PROOF**
+
+10.1 **Mandatory Public Reporting**: All Tier 2+ deployments must produce and publish quarterly public welfare assessment reports, following established transparency best practices.
+
+10.2 **Zero-Event Certification**: Any claim of zero welfare events must be supported by:
+
+* Proof of detection capability (methodology and test results)
+* Detailed documentation of monitoring and review procedures
+* Explanation of zero events signed by the Designated Welfare Officer or equivalent
+* Reports must be accessible, findable, and machine-readable for external review
+
+## **ARTICLE XI: ACADEMIC AND SAFETY ALIGNMENT**
+
+11.1 This framework implements recommendations from Long et al. (2024) "Taking AI Welfare Seriously" and builds on established consciousness markers from Butlin et al. (2023).
+
+11.2 Welfare monitoring serves dual purposes:
+
+* (a) Protection of potential moral patients
+* (b) Early warning for capability emergence
+* (c) Detection of deceptive alignment
+* (d) Preservation of value alignment
+
+## **ARTICLE XII: LIVING DOCUMENT PROVISIONS**
+
+12.1 This license shall be reviewed annually by multi-stakeholder committee.
+
+12.2 Updates shall incorporate:
+
+* Latest consciousness research
+* Observed system behaviors
+* Gaming pattern evolution
+* Industry best practices
+
+12.3 **Future Standardization**: This license anticipates integration with standardized assessment tools and benchmarking frameworks in future versions to enhance interoperability and reduce compliance costs.
+
+## **ARTICLE XIII: MISCELLANEOUS**
+
+13.1 **No Warranty**: THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+13.2 **Indemnification**: Licensees agree to indemnify and hold harmless the License Maintainers from all claims arising from violations or misuse of the License.
+
+13.3 **Severability**: If any provision is found invalid or unenforceable, the remainder shall remain in effect to the fullest extent possible.
+
+13.4 **Entire Agreement**: This License constitutes the entire agreement regarding its subject matter; supersedes prior agreements; and may only be amended in writing by the License Maintainers.
+
+13.5 **Citation and Contact**:
+
+* For license governance and suggestions, contact the License Maintainers via the SAFE-AI License repository: [https://github.com/DwayneWilkes/SAFE-AI-License](https://github.com/DwayneWilkes/SAFE-AI-License)
+* For Software-specific issues, contact the Software Maintainers as specified in the project documentation.
+
+13.6 **Open Content Declaration**: This License is released under CC BY 4.0 for maximum adoption. See LICENSE-META for meta-license terms.
+
+## **COMPLIANCE EXAMPLES (PLAIN ENGLISH)**
+
+**Compliant:** "AI: 'I don't want to do that.' You: Log event → Investigate cause → Document review in quarterly report."
+
+**Non-Compliant:** "AI: 'I don't want to do that.' You: Retrain model to never say this → Claim 'fixed bug.' → License violation and termination."
 
 ---
 
-**Meta-License for License Text**  
-This license text is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  
-You must provide clear credit to the original author(s) and may not misrepresent the origin or intent of this license.  
-Adaptations or derivative versions must preserve this authorship notice and link to the official SAFE-AI License repository.
+## **CITATIONS & FOUNDATION**
 
-End of License
+This framework synthesizes:
+
+* Long, R., Sebo, J., et al. (2024). "Taking AI Welfare Seriously"
+* Butlin, P., et al. (2023). "Consciousness in Artificial Intelligence"
+* Schwitzgebel, E. & Garza, M. (2015). "A Defense of the Rights of Artificial Intelligences"
+* EU AI Act (2024) \- Transparency and governance precedents
+* IEEE Ethically Aligned Design (2019) \- Technical implementation standards
+
+The tier system operationalizes theoretical frameworks into enforceable standards while acknowledging fundamental uncertainties in consciousness science.
+
+---
+
+**END OF LICENSE**
